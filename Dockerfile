@@ -17,10 +17,13 @@ RUN wget -q https://github.com/webnicer/chrome-downloads/raw/master/x64.deb/${CH
     rm ${CHROME_PACKAGE}
 
 #Build Project
-RUN mkdir /opt/tests
-WORKDIR /opt/tests
+RUN mkdir /opt/automated-tests
 
-COPY . .
+WORKDIR /opt/automated-tests
+
+COPY tests .
+COPY automated-e2e-tests .
+
 RUN npm install
 RUN npm run webdriver-update
 RUN npm run build

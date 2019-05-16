@@ -1,5 +1,5 @@
 import * as path from "path";
-import { browser, Config } from "../node_modules/protractor/built";
+import { browser, Config } from "protractor";
 import { Reporter } from "../support/reporter";
 const jsonReports = process.cwd() + "/reports/json";
 

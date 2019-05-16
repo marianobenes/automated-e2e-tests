@@ -1,6 +1,6 @@
-import * as reporter from "../node_modules/cucumber-html-reporter";
+import * as reporter from "cucumber-html-reporter";
 import * as fs from "fs";
-import * as mkdirp from "../node_modules/mkdirp";
+import * as mkdirp from "mkdirp";
 import * as path from "path";
 const jsonReports = path.join(process.cwd(), "/reports/json");
 const htmlReports = path.join(process.cwd(), "/reports/html");
