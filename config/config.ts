@@ -1,4 +1,3 @@
-import * as path from "path";
 import { browser, Config } from "protractor";
 import { Reporter } from "../support/reporter";
 const jsonReports = process.cwd() + "/reports/json";
@@ -10,7 +9,7 @@ export const config: Config = {
 
     SELENIUM_PROMISE_MANAGER: false,
 
-    baseUrl: "https://www.google.cl",
+    baseUrl: process.env.BASE_URL,
 
     capabilities: {
         browserName: "chrome",
