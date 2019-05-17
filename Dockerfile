@@ -7,14 +7,15 @@ RUN apt-get update && \
     apt-get -y -f install openjdk-8-jdk-headless
 
 #Install Chrome
-ENV CHROME_PACKAGE="google-chrome-stable_74.0.3729.157-1_amd64.deb" NODE_PATH=/usr/local/lib/node_modules:/protractor/node_modules
+ENV NODE_PATH=/usr/local/lib/node_modules:/protractor/node_modules
 
-RUN wget -q https://github.com/webnicer/chrome-downloads/raw/master/x64.deb/${CHROME_PACKAGE} && \
-    dpkg --unpack ${CHROME_PACKAGE} && \
+ADD https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb CHROME_PACKAGE
+
+RUN   dpkg --unpack CHROME_PACKAGE && \
     apt-get install -f -y && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* \
-    rm ${CHROME_PACKAGE}
+    rm CHROME_PACKAGE
 
 #Build Project
 RUN mkdir /opt/automated-tests

@@ -9,8 +9,6 @@ export const config: Config = {
 
     SELENIUM_PROMISE_MANAGER: false,
 
-    baseUrl: process.env.BASE_URL,
-
     capabilities: {
         browserName: "chrome",
         chromeOptions: {

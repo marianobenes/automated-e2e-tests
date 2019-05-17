@@ -6,7 +6,5 @@ services:
       dockerfile: ./automated-e2e-tests/Dockerfile
     volumes:
       - ./reports:/opt/automated-tests/reports
-    environment: 
-      - BASE_URL="www.google.cl"
 
   
