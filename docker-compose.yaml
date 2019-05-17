@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  automated_tests:
+    build:
+      context: ..
+      dockerfile: ./automated-e2e-tests/Dockerfile
+    volumes:
+      - ./reports:/opt/automated-tests/reports docker_tests
+    environment: 
+      - BASE_URL="www.google.cl"
+
+  
