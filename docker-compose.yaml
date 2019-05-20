@@ -5,7 +5,7 @@ services:
       context: ..
       dockerfile: ./automated-e2e-tests/Dockerfile
     volumes:
-      - reports:/opt/automated-tests/reports
+      - jenkins_reports:/opt/automated-tests/reports
 
 volumes:
   reports:
