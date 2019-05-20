@@ -5,6 +5,6 @@ services:
       context: ..
       dockerfile: ./automated-e2e-tests/Dockerfile
     volumes:
-      - ./reports:/opt/automated-tests/reports
+      - /reports:/opt/automated-tests/reports
 
   
