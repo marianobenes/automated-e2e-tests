@@ -8,7 +8,7 @@ services:
       - jenkins_reports:/opt/automated-tests/reports
 
 volumes:
-  reports:
+  jenkins_reports:
     external: true
 
   
