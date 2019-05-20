@@ -7,6 +7,8 @@ services:
     volumes:
       - reports:/opt/automated-tests/reports
 
-
+volumes:
+  reports:
+    external: true
 
   
